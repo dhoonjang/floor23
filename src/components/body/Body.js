@@ -12,13 +12,13 @@ class Header extends Component {
     return (
       <Main>
         <Body>
-          <Route exact path="/photo" component={Photo}/>
-          <Route path="/video" component={Video}/>
-          <Route path="/Top" component={Top}/>
-          <Route path="/bottom" component={Bottom}/>
-          <Route path="/Acc" component={Acc}/>
-          <Route path="/design item" component={DesignItem}/>
-          <Route path="/book" component={Book}/>
+          <Route path={process.env.PUBLIC_URL + "/photo"} component={Photo}/>
+          <Route path={process.env.PUBLIC_URL + "/video"} component={Video}/>
+          <Route path={process.env.PUBLIC_URL + "/Top"} component={Top}/>
+          <Route path={process.env.PUBLIC_URL + "/bottom"} component={Bottom}/>
+          <Route path={process.env.PUBLIC_URL + "/Acc"} component={Acc}/>
+          <Route path={process.env.PUBLIC_URL + "/design item"} component={DesignItem}/>
+          <Route path={process.env.PUBLIC_URL + "/book"} component={Book}/>
         </Body>
       </Main>
     );

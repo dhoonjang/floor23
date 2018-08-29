@@ -3,11 +3,7 @@ import Menu from './Menu';
 import { Main, Title, MenuList, Move } from './../glamorous.js'
 
 class Header extends Component {
-  state = {
-    checkFilm: false
-  }
-
-  render() {
+    render() {
     return (
       <Main>
         <Title>floor 23</Title>
