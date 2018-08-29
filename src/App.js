@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import Header from './components/Header'
+import Header from './components/header/Header'
+import Body from './components/body/Body';
+import {BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Body />
+        </div>
+      </BrowserRouter>
     );
   }
 }

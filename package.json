@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.13.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
@@ -16,7 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "homepage": "http://dhoonjang.github.io/floor23",
   "devDependencies": {
