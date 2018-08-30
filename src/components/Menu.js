@@ -13,7 +13,7 @@ SMenu.defaultProps = {
 
 class Menu extends Component {
   state = {
-    showChildren: false
+    showChildren: null
   }
 
   static defaultProps = {
@@ -21,15 +21,8 @@ class Menu extends Component {
     children: []
   };
 
-  show = () => {
-    let showChildren;
-
-    if(this.state.showChildren)
-      showChildren = false;
-    else
-      showChildren = true;
-
-    this.setState({ showChildren })
+  componentDidUpdate() {
+    console.log("ss")
   }
 
   render() {
@@ -39,8 +32,8 @@ class Menu extends Component {
 
     return(
       <div>
-        <MenuTitle onClick={this.show}>{this.props.name}</MenuTitle>
-        <SMenuList>{ this.state.showChildren && smenu }</SMenuList>
+        <MenuTitle onClick={this.props.onShow}>{this.props.name}</MenuTitle>
+        <SMenuList>{ this.props.show && smenu }</SMenuList>
       </div>
     )
   }

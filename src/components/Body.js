@@ -4,14 +4,11 @@ import { Route } from 'react-router-dom';
 import Pages from 'pages';
 
 class Header extends Component {
-  state = {
-    checkFilm: false
-  }
-
+  
   render() {
     const pages = Pages.map(
       (page, info) => (
-        <Route key={info} path={process.env.PUBLIC_URL + page.path} component={page.component}/>
+        <Route key={info} path={process.env.PUBLIC_URL+page.path} component={page.component}/>
       )
     )
 

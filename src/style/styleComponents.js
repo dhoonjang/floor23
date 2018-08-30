@@ -40,7 +40,7 @@ export const IconList = glamorous.div({
   textDecoration: 'none'
 })
 
-export const MenuList = glamorous.div({
+export const MainMenuList = glamorous.div({
   display: 'grid',
   gridTemplateColumns: '1fr 1fr 1fr'
 })
