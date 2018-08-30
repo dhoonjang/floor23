@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
-import { Main, Title, MenuList, Move } from './../glamorous.js'
+import { MainHeader, Title, MenuList, IconList } from 'style/styleComponents'
 
 class Header extends Component {
     render() {
     return (
-      <Main>
-        <Title>floor 23</Title>
-        <Move>
-          <a href="https://www.instagram.com/23iii_film">intagram</a><br/>
+      <MainHeader>
+        <Title to='/'>floor 23</Title>
+        <IconList>
+          <a href="https://www.instagram.com/23iii_film">instagram</a><br/>
           <a href="http://www.youtube.com">youtube</a>
-        </Move>
+        </IconList>
         <MenuList>
           <Menu name="film" children={["photo", "video"]} />
           <Menu name="fashion" children={["Top", "bottom", "Acc"]} />
           <Menu name="items" children={["design item", "book"]} />
         </MenuList>
-      </Main>
+      </MainHeader>
     );
   }
 }

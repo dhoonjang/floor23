@@ -1,4 +1,9 @@
 {
   "presets": ["env", "react"],
-  "plugins": ["styled-components"]
+  "plugins": [
+    "module-resolver",
+    {
+      "root": ["./src"]
+    }
+  ]
 }
