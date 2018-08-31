@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {MenuTitle, SMenuList, SLink} from 'style/styleComponents';
+import {ThemeProvider} from 'glamorous';
 
 let SMenu = ({name}) => {
   return(
-    <SLink to={name}>{name}</SLink>
+    <SLink to={process.env.PUBLIC_URL +'/'+ name}>{name}</SLink>
   )
 };
 
@@ -13,7 +14,10 @@ SMenu.defaultProps = {
 
 class Menu extends Component {
   state = {
-    showChildren: null
+    show: false,
+    theme: {
+      display: 'none'
+    }
   }
 
   static defaultProps = {
@@ -21,8 +25,15 @@ class Menu extends Component {
     children: []
   };
 
-  componentDidUpdate() {
-    console.log("ss")
+  change = () => {
+    const show = !this.state.show
+
+    this.setState({
+      show,
+      theme: {
+        display: show ? 'block' : 'none'
+      }
+    })
   }
 
   render() {
@@ -31,10 +42,12 @@ class Menu extends Component {
     );
 
     return(
-      <div>
-        <MenuTitle onClick={this.props.onShow}>{this.props.name}</MenuTitle>
-        <SMenuList>{ this.props.show && smenu }</SMenuList>
-      </div>
+      <ThemeProvider theme={this.state.theme}>
+        <div>
+          <MenuTitle onClick={this.change}>{this.props.name}</MenuTitle>
+          <SMenuList onClick={this.change}>{ smenu }</SMenuList>
+        </div>
+      </ThemeProvider>
     )
   }
 }

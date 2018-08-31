@@ -4,7 +4,6 @@ import { Route } from 'react-router-dom';
 import Pages from 'pages';
 
 class Header extends Component {
-  
   render() {
     const pages = Pages.map(
       (page, info) => (
@@ -16,7 +15,7 @@ class Header extends Component {
       <MainBody>
         {pages}
       </MainBody>
-    );
+    )
   }
 }
 

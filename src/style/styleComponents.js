@@ -60,13 +60,15 @@ export const MenuTitle = glamorous.div({
 export const SMenuList = glamorous.div({
   backgroundColor: 'papayawhip',
   marginTop: '0'
-})
+}, ({ theme }) => ({
+  display: theme.display
+}))
 
 const SLinkFactory = glamorous(Link);
 export const SLink = SLinkFactory({
   color: 'black',
-  display: 'block',
   userSelect: 'none',
+  display: 'block',
   cursor: 'pointer',
   fintSize: '15px',
   marginLeft: '80px',
