@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     const pages = Pages.map(
       (page, info) => (
-        <Route key={info} path={process.env.PUBLIC_URL+page.path} component={page.component}/>
+        <Route key={info} exact={true} path={process.env.PUBLIC_URL+page.path} component={page.component}/>
       )
     )
 

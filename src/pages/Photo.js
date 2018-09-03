@@ -1,12 +1,15 @@
 import React from 'react';
+import {Box , MainPhoto} from 'style/styleComponents';
 
 const Photo = () => {
     return (
-        <div>
-            <h2>
-                Photo
-            </h2>
-        </div>
+        <MainPhoto>
+            <Box></Box>
+            <Box></Box>
+            <Box></Box>
+            <Box></Box>
+            <Box></Box>
+        </MainPhoto>
     );
 };
 

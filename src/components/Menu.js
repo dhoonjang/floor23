@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {MenuTitle, SMenuList, SLink} from 'style/styleComponents';
+import {MenuTitle, SLink, Lang} from 'style/styleComponents';
 import {ThemeProvider} from 'glamorous';
 
 let SMenu = ({name}) => {
@@ -14,10 +14,7 @@ SMenu.defaultProps = {
 
 class Menu extends Component {
   state = {
-    show: false,
-    theme: {
-      display: 'none'
-    }
+    show: false
   }
 
   static defaultProps = {
@@ -28,12 +25,7 @@ class Menu extends Component {
   change = () => {
     const show = !this.state.show
 
-    this.setState({
-      show,
-      theme: {
-        display: show ? 'block' : 'none'
-      }
-    })
+    this.setState({  show  })
   }
 
   render() {
@@ -42,12 +34,10 @@ class Menu extends Component {
     );
 
     return(
-      <ThemeProvider theme={this.state.theme}>
-        <div>
-          <MenuTitle onClick={this.change}>{this.props.name}</MenuTitle>
-          <SMenuList onClick={this.change}>{ smenu }</SMenuList>
-        </div>
-      </ThemeProvider>
+      <div onMouseEnter={this.change} onMouseLeave={this.change}>
+        <MenuTitle>{this.props.name} <Lang>{this.props.lang}</Lang></MenuTitle>
+        { this.state.show && smenu }
+      </div>
     )
   }
 }

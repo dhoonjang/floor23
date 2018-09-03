@@ -4,26 +4,36 @@ import Menu from './Menu';
 
 let MenuDB = [
   {
-    name: "flim",
+    name: "FILM",
+    lang: "フィルム",
     children: [
       "photo",
       "video"
     ]
   },
   {
-    name: "fashion",
+    name: "FASHION",
+    lang:  "ファッション",
     children: [
-      "Top",
+      "top",
       "bottom",
-      "Acc"
+      "acc"
     ]
   },
   {
-    name: "items",
+    name: ""
+  },
+  {
+    name: "ART",
+    lang: "アイテム",
     children: [
-      "design item",
+      "goods",
       "book"
     ]
+  },
+  {
+    name: "CONTACT",
+    children: []
   }
 ]
 
@@ -35,6 +45,7 @@ class MenuList extends Component {
             <Menu
               name={menu.name}
               children={menu.children}
+              lang={menu.lang}
               key={info}
             />
           )

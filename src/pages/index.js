@@ -5,6 +5,7 @@ import {default as DesignItem} from './DesignItem';
 import {default as Photo} from './Photo';
 import {default as Top} from './Top';
 import {default as Video} from './Video';
+import {default as Home} from './Home';
 
 const Pages = [
   {
@@ -28,12 +29,16 @@ const Pages = [
     component: Bottom
   },
   {
-    path: "/design item",
+    path: "/goods",
     component: DesignItem
   },
   {
     path: "/book",
     component: Book
+  },
+  {
+    path: "/",
+    component: Home
   }
 ]
 
