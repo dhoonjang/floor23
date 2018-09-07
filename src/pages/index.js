@@ -6,6 +6,7 @@ import {default as Photo} from './Photo';
 import {default as Top} from './Top';
 import {default as Video} from './Video';
 import {default as Home} from './Home';
+import {default as Contact} from './Contact';
 
 const Pages = [
   {
@@ -35,6 +36,10 @@ const Pages = [
   {
     path: "/book",
     component: Book
+  },
+  {
+    path: "/contact",
+    component: Contact
   },
   {
     path: "/",

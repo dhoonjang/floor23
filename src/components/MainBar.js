@@ -5,7 +5,8 @@ import Menu from './Menu';
 let MenuDB = [
   {
     name: "FILM",
-    lang: "フィルム",
+    english: "フィルム",
+    china: "影片",
     children: [
       "photo",
       "video"
@@ -13,7 +14,8 @@ let MenuDB = [
   },
   {
     name: "FASHION",
-    lang:  "ファッション",
+    english:  "ファッション",
+    china: "時尚",
     children: [
       "top",
       "bottom",
@@ -25,7 +27,8 @@ let MenuDB = [
   },
   {
     name: "ART",
-    lang: "アイテム",
+    english: "アート",
+    china: "藝術",
     children: [
       "goods",
       "book"
@@ -33,11 +36,18 @@ let MenuDB = [
   },
   {
     name: "CONTACT",
+    english: "コンタクト",
+    china: "與我聯絡",
     children: []
   }
 ]
 
-class MenuList extends Component {
+class MainBar extends Component {
+
+  static defaultProps = {
+    lang: "english"
+  };
+
   render() {
     const ManyMenu = MenuDB.map(
         (menu, info) => {
@@ -55,7 +65,7 @@ class MenuList extends Component {
               <Menu
                 name={menu.name}
                 children={menu.children}
-                lang={menu.lang}
+                lang={this.props.lang === "english" ? menu.english : menu.china}
                 key={info}
               />
             )
@@ -71,4 +81,4 @@ class MenuList extends Component {
   }
 }
 
-export default MenuList;
+export default MainBar;

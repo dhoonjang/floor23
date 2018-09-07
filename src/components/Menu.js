@@ -1,15 +1,5 @@
 import React, {Component} from 'react';
-import {MenuTitle, SLink, Lang, MainMenu} from 'style/styleComponents';
-
-let SMenu = ({name}) => {
-  return(
-    <SLink to={process.env.PUBLIC_URL +'/'+ name}>{name}</SLink>
-  )
-};
-
-SMenu.defaultProps = {
-  name: "NULL"
-};
+import {MenuTitle, SLink, MLink, Lang, MainMenu} from 'style/styleComponents';
 
 class Menu extends Component {
   state = {
@@ -28,16 +18,29 @@ class Menu extends Component {
   }
 
   render() {
-    const smenu = this.props.children.map(
-      (child, info) => (<SMenu name={child} key={info}/>)
+    const menu = this.props.children.map(
+      (child, info) => (
+        <SLink to={process.env.PUBLIC_URL +'/'+ child}>{child}</SLink>
+      )
     );
 
-    return(
-      <MainMenu onMouseEnter={this.change} onMouseLeave={this.change}>
-        <MenuTitle>{this.props.name} <Lang>{this.props.lang}</Lang></MenuTitle>
-        { this.state.show && smenu }
-      </MainMenu>
-    )
+    if(this.props.name === "CONTACT") {
+      return(
+        <MainMenu>
+          <MLink to={process.env.PUBLIC_URL + '/contact'}>
+            <MenuTitle>{this.props.name} <Lang>{this.props.lang}</Lang></MenuTitle>
+          </MLink>
+        </MainMenu>
+      )
+    }
+    else {
+      return(
+        <MainMenu onMouseEnter={this.change} onMouseLeave={this.change}>
+          <MenuTitle>{this.props.name} <Lang>{this.props.lang}</Lang></MenuTitle>
+          { this.state.show && menu }
+        </MainMenu>
+      )
+    }
   }
 }
 

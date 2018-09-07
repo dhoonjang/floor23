@@ -1,11 +1,11 @@
 import React from 'react';
-import { MainBox } from 'style/styleComponents'
+import { MainBox } from 'style/stylePages'
 
 const Home = () => {
     return (
-        <MainBox>
+        <div>
           <img src={require('img/HomePhoto.png')} alt = "Home" width = "600px" />
-        </MainBox>
+        </div>
     );
 };
 

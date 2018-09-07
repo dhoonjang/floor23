@@ -8,7 +8,7 @@ export const MainApp = glamorous.div({
 
 export const MainBody = glamorous.div({
   margin: '0 auto',
-  marginTop: '120px',
+  marginTop: '130px',
   width: '600px',
   zIndex: '0'
 })
@@ -18,6 +18,7 @@ export const MainHeader = glamorous.div({
   zIndex: '1',
   textAlign: 'center',
   width: '720px',
+  fontFamily: 'roboto'
 })
 
 const TitleFactory = glamorous(Link)
@@ -30,14 +31,18 @@ export const Title = TitleFactory({
 
 export const IconBox = glamorous.div({
   position: 'fixed',
-  top: '20',
-  right: '10',
+  top: '0.5em',
   textDecoration: 'none',
   zIndex: '3'
-})
+},({id}) => ({
+  left: id === 'right' && '0.1em',
+  right: id === 'left' && '0.1em'
+}))
 
 export const Icon = glamorous.a({
-  marginLeft: '5px'
+  marginLeft: '0.5em',
+  userSelect: 'none',
+  cursor: 'pointer'
 })
 
 export const MainMenuList = glamorous.div({
@@ -58,7 +63,7 @@ export const MenuTitle = glamorous.div({
   fontSize: '1em',
   userSelect: 'none',
   cursor: 'pointer',
-  marginBottom: '15px',
+  marginBottom: '0.5em',
 })
 
 const SLinkFactory = glamorous(Link);
@@ -67,11 +72,20 @@ export const SLink = SLinkFactory({
   userSelect: 'none',
   display: 'block',
   cursor: 'pointer',
-  marginTop: '3px',
+  fontSize: '0.8em',
+  marginTop: '0.01em',
   textDecoration: 'none',
   ':hover': {
     color: 'darkorange',
   }
+})
+
+export const MLink = SLinkFactory({
+  color: 'black',
+  userSelect: 'none',
+  display: 'block',
+  cursor: 'pointer',
+  textDecoration: 'none',
 })
 
 export const HeaderBox = glamorous.div({
@@ -85,29 +99,13 @@ export const HeaderBox = glamorous.div({
   zIndex: '1'
 })
 
-export const MainBox = glamorous.div({
-  border: '1px solid #7f6153',
-  minHeight: '300px'
-})
-
-export const Box = glamorous.div({
-  border: '1px solid #7f6153',
-  width: '250px',
-  margin: '0 auto',
-  height: '250px',
-  marginBottom: '20px',
-}, ({id}) => ({
-  '@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
-    marginLeft: id%2 === 0 ? '30' : '320',
-    marginTop: id%2 !== 0 && '-273'
-  }
-}))
-
-export const MainPhoto = glamorous.div({
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-})
-
 export const Lang = glamorous.span({
-  fontSize: '0.7em'
+  fontSize: '0.7em',
+  fontFamily: 'IPAex'
+})
+
+export const MainFooter = glamorous.div({
+  width: '720px',
+  borderTop: '2px solid #7F6153',
+  marginTop: '50px'
 })

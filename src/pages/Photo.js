@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box , MainPhoto} from 'style/styleComponents';
+import {Box , MainPhoto} from 'style/stylePages';
 
 const photoDB = [
   {

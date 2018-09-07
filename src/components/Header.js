@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
-import MenuList from './MenuList';
+import MainBar from './MainBar';
 import { MainHeader, IconBox, Icon, HeaderBox } from 'style/styleComponents'
 
 class Header extends Component {
     state = {
-      update: false
+      update: false,
+      lang: "english"
+    }
+
+    setEnglish = () => {
+      this.setState({
+        lang: "english"
+      })
+    }
+    setChina = () => {
+      this.setState({
+        lang: "china"
+      })
     }
 
     render() {
     return (
       <MainHeader>
-        <IconBox>
+        <MainBar lang = {this.state.lang}/>
+        <IconBox id = "left">
           <Icon href="https://www.instagram.com/23iii_film">
             <img src={require('img/insta.png')} width='35px' alt='instagram' />
           </Icon>
@@ -18,7 +31,10 @@ class Header extends Component {
             <img src={require('img/youtube.png')} width='35px' alt='youtube'/>
           </Icon>
         </IconBox>
-        <MenuList />
+        <IconBox id = "right">
+          <Icon onClick = {this.setEnglish}>ENGLISH</Icon>
+          <Icon onClick = {this.setChina}>中文</Icon>
+        </IconBox>
         <HeaderBox />
       </MainHeader>
     );
