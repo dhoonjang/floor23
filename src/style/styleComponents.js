@@ -22,10 +22,7 @@ export const MainHeader = glamorous.div({
 
 const TitleFactory = glamorous(Link)
 export const Title = TitleFactory({
-  position: 'fixed',
-  top: '5',
   margin: '0 auto',
-  width: '720px',
   zIndex: '2',
   display: 'block',
   userSelect: 'none'
@@ -38,21 +35,27 @@ export const IconBox = glamorous.div({
   textDecoration: 'none',
   zIndex: '3'
 })
+
 export const Icon = glamorous.a({
   marginLeft: '5px'
 })
+
 export const MainMenuList = glamorous.div({
   position: 'fixed',
-  top: '50',
+  top: '5',
   width: '720px',
-  display: 'grid',
-  gridTemplateColumns: '1fr 1.2fr 0.8fr 1fr 1.2fr',
+  display: 'table',
   zIndex: '2'
 })
-
+export const MainMenu = glamorous.div({
+  textAlign: 'center',
+  display: 'table-cell',
+  width: '20%',
+  minWidth: '50px'
+})
 export const MenuTitle = glamorous.div({
   margin: '0 auto',
-  fontSize: '17px',
+  fontSize: '1em',
   userSelect: 'none',
   cursor: 'pointer',
   marginBottom: '15px',
@@ -89,16 +92,22 @@ export const MainBox = glamorous.div({
 
 export const Box = glamorous.div({
   border: '1px solid #7f6153',
-  height: '250px',
+  width: '250px',
   margin: '0 auto',
+  height: '250px',
   marginBottom: '20px',
-  width: '250px'
-})
+}, ({id}) => ({
+  '@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+    marginLeft: id%2 === 0 ? '30' : '320',
+    marginTop: id%2 !== 0 && '-273'
+  }
+}))
 
 export const MainPhoto = glamorous.div({
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
 })
+
 export const Lang = glamorous.span({
-  fontSize: '10px'
+  fontSize: '0.7em'
 })

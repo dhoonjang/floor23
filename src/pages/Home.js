@@ -3,7 +3,9 @@ import { MainBox } from 'style/styleComponents'
 
 const Home = () => {
     return (
-        <MainBox />
+        <MainBox>
+          <img src={require('img/HomePhoto.png')} alt = "Home" width = "600px" />
+        </MainBox>
     );
 };
 

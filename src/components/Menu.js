@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {MenuTitle, SLink, Lang} from 'style/styleComponents';
-import {ThemeProvider} from 'glamorous';
+import {MenuTitle, SLink, Lang, MainMenu} from 'style/styleComponents';
 
 let SMenu = ({name}) => {
   return(
@@ -34,10 +33,10 @@ class Menu extends Component {
     );
 
     return(
-      <div onMouseEnter={this.change} onMouseLeave={this.change}>
+      <MainMenu onMouseEnter={this.change} onMouseLeave={this.change}>
         <MenuTitle>{this.props.name} <Lang>{this.props.lang}</Lang></MenuTitle>
         { this.state.show && smenu }
-      </div>
+      </MainMenu>
     )
   }
 }
