@@ -145,4 +145,7 @@ export const MainFooter = glamorous.div({
   width: '720px',
   borderTop: '2px solid #7F6153',
   marginTop: '50px',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
