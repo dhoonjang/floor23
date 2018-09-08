@@ -32,7 +32,7 @@ class Header extends Component {
           </Icon>
         </IconBox>
         <IconBox id = "right">
-          <LIcon onClick = {this.setEnglish}>ENGLISH</LIcon>
+          <LIcon onClick = {this.setEnglish}>日本語</LIcon>
           <LIcon onClick = {this.setChina}>中文</LIcon>
         </IconBox>
         <HeaderBox />
