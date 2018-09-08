@@ -3,14 +3,20 @@ import {Link} from 'react-router-dom';
 
 export const MainApp = glamorous.div({
   width: '720px',
-  margin: '0 auto'
+  margin: '0 auto',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
 
 export const MainBody = glamorous.div({
   margin: '0 auto',
   marginTop: '130px',
   width: '600px',
-  zIndex: '0'
+  zIndex: '0',
+  '@media only screen and (max-width: 600px)': {
+    width: '95%'
+  }
 })
 
 export const MainHeader = glamorous.div({
@@ -18,7 +24,10 @@ export const MainHeader = glamorous.div({
   zIndex: '1',
   textAlign: 'center',
   width: '720px',
-  fontFamily: 'roboto'
+  fontFamily: 'roboto',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
 
 const TitleFactory = glamorous(Link)
@@ -42,7 +51,24 @@ export const IconBox = glamorous.div({
 export const Icon = glamorous.a({
   marginLeft: '0.5em',
   userSelect: 'none',
-  cursor: 'pointer'
+  display: 'inline-block',
+  cursor: 'pointer',
+  width: '35px',
+  '@media only screen and (max-width: 720px)': {
+    width: '30px'
+  }
+})
+
+export const LIcon = glamorous.a({
+  color: '#7F6153',
+  marginLeft: '0.8em',
+  userSelect: 'none',
+  display: 'inline-block',
+  cursor: 'pointer',
+  fontSize: '1em',
+  '@media only screen and (max-width: 720px)': {
+    fontSize: '0.8em'
+  }
 })
 
 export const MainMenuList = glamorous.div({
@@ -50,7 +76,10 @@ export const MainMenuList = glamorous.div({
   top: '5',
   width: '720px',
   display: 'table',
-  zIndex: '2'
+  zIndex: '2',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
 export const MainMenu = glamorous.div({
   textAlign: 'center',
@@ -61,6 +90,7 @@ export const MainMenu = glamorous.div({
 export const MenuTitle = glamorous.div({
   margin: '0 auto',
   fontSize: '1em',
+  color: '#7F6153',
   userSelect: 'none',
   cursor: 'pointer',
   marginBottom: '0.5em',
@@ -68,20 +98,22 @@ export const MenuTitle = glamorous.div({
 
 const SLinkFactory = glamorous(Link);
 export const SLink = SLinkFactory({
-  color: 'black',
+  color: '#7F6153',
   userSelect: 'none',
   display: 'block',
   cursor: 'pointer',
   fontSize: '0.8em',
   marginTop: '0.01em',
+  marginLeft: '3em',
   textDecoration: 'none',
+  textAlign: 'left',
   ':hover': {
     color: 'darkorange',
   }
 })
 
 export const MLink = SLinkFactory({
-  color: 'black',
+  color: '#7F6153',
   userSelect: 'none',
   display: 'block',
   cursor: 'pointer',
@@ -95,17 +127,22 @@ export const HeaderBox = glamorous.div({
   margin: '0 auto',
   height: '80px',
   backgroundColor: 'white',
-  borderBottom: '2px solid #7F6153',
-  zIndex: '1'
+  borderBottom: '2px solid #7F7570',
+  zIndex: '1',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
 
 export const Lang = glamorous.span({
   fontSize: '0.7em',
-  fontFamily: 'IPAex'
+  '@media only screen and (max-width: 720px)': {
+    display: 'none'
+  }
 })
 
 export const MainFooter = glamorous.div({
   width: '720px',
   borderTop: '2px solid #7F6153',
-  marginTop: '50px'
+  marginTop: '50px',
 })

@@ -21,6 +21,10 @@ export const Box = glamorous.div({
 }))
 
 export const MainPhoto = glamorous.div({
+  width: '600px',
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
+  '@media only screen and (max-width: 720px)': {
+    width: '100%'
+  }
 })
