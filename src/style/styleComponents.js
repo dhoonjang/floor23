@@ -1,5 +1,13 @@
 import glamorous from 'glamorous';
+import {css} from 'glamor';
 import {Link} from 'react-router-dom';
+
+css.global('@font-face',
+  {
+    fontFamily: 'Helvetica',
+    src: 'fonts/Helvetica Light.ttf'
+  }
+);
 
 export const MainApp = glamorous.div({
   width: '720px',
@@ -24,7 +32,7 @@ export const MainHeader = glamorous.div({
   zIndex: '1',
   textAlign: 'center',
   width: '720px',
-  fontFamily: 'roboto',
+  fontFamily: 'Helvetica',
   '@media only screen and (max-width: 720px)': {
     width: '100%'
   }
@@ -84,12 +92,12 @@ export const MainMenuList = glamorous.div({
 export const MainMenu = glamorous.div({
   textAlign: 'center',
   display: 'table-cell',
-  width: '20%',
-  minWidth: '90px'
+  width: '20%'
 })
 export const MenuTitle = glamorous.div({
   margin: '0 auto',
   fontSize: '1em',
+  fontFamily: 'Helvetica',
   color: '#7F6153',
   userSelect: 'none',
   cursor: 'pointer',
@@ -106,6 +114,7 @@ export const SLink = SLinkFactory({
   display: 'block',
   cursor: 'pointer',
   fontSize: '0.8em',
+  fontFamily: 'Helvetica',
   marginTop: '0.01em',
   marginLeft: '20%',
   textDecoration: 'none',
@@ -121,9 +130,6 @@ export const MLink = SLinkFactory({
   display: 'block',
   cursor: 'pointer',
   textDecoration: 'none',
-  '@media only screen and (max-width: 720px)': {
-    fontSize: '0.9em'
-  }
 })
 
 export const HeaderBox = glamorous.div({

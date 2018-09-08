@@ -4,7 +4,7 @@ import Menu from './Menu';
 
 let MenuDB = [
   {
-    name: "FILM",
+    name: "Film",
     english: "フィルム",
     china: "影片",
     children: [
@@ -13,7 +13,7 @@ let MenuDB = [
     ]
   },
   {
-    name: "FASHION",
+    name: "Fahion",
     english:  "ファッション",
     china: "時尚",
     children: [
@@ -26,7 +26,7 @@ let MenuDB = [
     name: "title"
   },
   {
-    name: "ART",
+    name: "Art",
     english: "アート",
     china: "藝術",
     children: [
@@ -35,7 +35,7 @@ let MenuDB = [
     ]
   },
   {
-    name: "CONTACT",
+    name: "Contact",
     english: "コンタクト",
     china: "與我聯絡",
     children: []

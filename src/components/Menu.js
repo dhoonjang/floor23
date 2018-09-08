@@ -24,7 +24,7 @@ class Menu extends Component {
       )
     );
 
-    if(this.props.name === "CONTACT") {
+    if(this.props.name === "Contact") {
       return(
         <MainMenu>
           <MLink to={process.env.PUBLIC_URL + '/contact'}>
