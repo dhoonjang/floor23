@@ -67,7 +67,7 @@ export const LIcon = glamorous.a({
   cursor: 'pointer',
   fontSize: '1em',
   '@media only screen and (max-width: 720px)': {
-    fontSize: '0.8em'
+    fontSize: '0.7em'
   }
 })
 
@@ -85,7 +85,7 @@ export const MainMenu = glamorous.div({
   textAlign: 'center',
   display: 'table-cell',
   width: '20%',
-  minWidth: '50px'
+  minWidth: '90px'
 })
 export const MenuTitle = glamorous.div({
   margin: '0 auto',
@@ -94,6 +94,9 @@ export const MenuTitle = glamorous.div({
   userSelect: 'none',
   cursor: 'pointer',
   marginBottom: '0.5em',
+  '@media only screen and (max-width: 720px)': {
+    fontSize: '0.9em'
+  }
 })
 
 const SLinkFactory = glamorous(Link);
@@ -104,7 +107,7 @@ export const SLink = SLinkFactory({
   cursor: 'pointer',
   fontSize: '0.8em',
   marginTop: '0.01em',
-  marginLeft: '3em',
+  marginLeft: '20%',
   textDecoration: 'none',
   textAlign: 'left',
   ':hover': {
@@ -118,6 +121,9 @@ export const MLink = SLinkFactory({
   display: 'block',
   cursor: 'pointer',
   textDecoration: 'none',
+  '@media only screen and (max-width: 720px)': {
+    fontSize: '0.9em'
+  }
 })
 
 export const HeaderBox = glamorous.div({
