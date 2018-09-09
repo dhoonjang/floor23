@@ -33,14 +33,14 @@ export const MainPhoto = glamorous.div({
   }
 })
 
-export const ContactBox = glamorous.div({
+export const PageBox = glamorous.div({
   fontSize: '1.1em',
   fontFamily: 'Helvetica',
   textAlign: 'center'
 })
 
 export const MLink = glamorous.a({
-  color: '#7F6153',
+  color: '#7F7570',
   userSelect: 'none',
   cursor: 'pointer',
   fontSize: '1em',

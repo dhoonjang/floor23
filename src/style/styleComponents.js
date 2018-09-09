@@ -28,6 +28,7 @@ export const MainApp = glamorous.div({
 export const MainBody = glamorous.div({
   margin: '0 auto',
   marginTop: '130px',
+  color: '#7F7570',
   width: '600px',
   zIndex: '0',
   fontFamily: 'Helvetica',

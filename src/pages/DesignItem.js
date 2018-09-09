@@ -1,12 +1,11 @@
 import React from 'react';
+import {PageBox} from 'style/stylePages'
 
 const DesignItem = () => {
     return (
-        <div>
-            <h2>
-                Coming Soon
-            </h2>
-        </div>
+      <PageBox>
+          Coming Soon
+      </PageBox>
     );
 };
 

@@ -1,14 +1,13 @@
 import React from 'react';
-import { ContactBox, MLink } from 'style/stylePages'
+import { PageBox, MLink } from 'style/stylePages'
 
 const Contact = () => {
     return (
-        <ContactBox>
-            <b>MAIL</b>:
+        <PageBox>
               <MLink href="mailto:artist23iii@gmail.com">
                 artist23iii@gmail.com
               </MLink>
-        </ContactBox>
+        </PageBox>
     );
 };
 
