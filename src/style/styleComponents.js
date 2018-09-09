@@ -6,6 +6,14 @@ css.global('@font-face',
   {
     fontFamily: 'Helvetica',
     src: 'fonts/Helvetica Light.ttf'
+  },
+  {
+    fontFamily: 'ipaexm',
+    src: 'fonts/ipaexm.ttf'
+  },
+  {
+    fontFamily: 'HelveticaB',
+    src: 'fonts/Helvetica Condensed Light.ttf'
   }
 );
 
@@ -22,6 +30,7 @@ export const MainBody = glamorous.div({
   marginTop: '130px',
   width: '600px',
   zIndex: '0',
+  fontFamily: 'Helvetica',
   '@media only screen and (max-width: 600px)': {
     width: '95%'
   }
@@ -52,8 +61,8 @@ export const IconBox = glamorous.div({
   textDecoration: 'none',
   zIndex: '3'
 },({id}) => ({
-  left: id === 'right' && '0.1em',
-  right: id === 'left' && '0.1em'
+  left: id === 'right' && '5%',
+  right: id === 'left' && '5%'
 }))
 
 export const Icon = glamorous.a({
@@ -74,6 +83,7 @@ export const LIcon = glamorous.a({
   display: 'inline-block',
   cursor: 'pointer',
   fontSize: '1em',
+  fontFamily: 'ipaexm',
   '@media only screen and (max-width: 720px)': {
     fontSize: '0.7em'
   }
@@ -90,20 +100,20 @@ export const MainMenuList = glamorous.div({
   }
 })
 export const MainMenu = glamorous.div({
-  textAlign: 'center',
+  textAlign: 'left',
   display: 'table-cell',
   width: '20%'
 })
 export const MenuTitle = glamorous.div({
-  margin: '0 auto',
   fontSize: '1em',
   fontFamily: 'Helvetica',
   color: '#7F6153',
   userSelect: 'none',
   cursor: 'pointer',
   marginBottom: '0.5em',
+  marginLeft: '15%',
   '@media only screen and (max-width: 720px)': {
-    fontSize: '0.9em'
+    fontSize: '0.95em'
   }
 })
 
@@ -116,7 +126,7 @@ export const SLink = SLinkFactory({
   fontSize: '0.8em',
   fontFamily: 'Helvetica',
   marginTop: '0.01em',
-  marginLeft: '20%',
+  marginLeft: '15%',
   textDecoration: 'none',
   textAlign: 'left',
   ':hover': {
@@ -148,6 +158,7 @@ export const HeaderBox = glamorous.div({
 
 export const Lang = glamorous.span({
   fontSize: '0.7em',
+  fontFamily: 'ipaexm',
   '@media only screen and (max-width: 720px)': {
     display: 'none'
   }
@@ -155,7 +166,7 @@ export const Lang = glamorous.span({
 
 export const MainFooter = glamorous.div({
   width: '720px',
-  borderTop: '2px solid #7F6153',
+  borderTop: '2px solid #7F7570',
   marginTop: '50px',
   '@media only screen and (max-width: 720px)': {
     width: '100%'

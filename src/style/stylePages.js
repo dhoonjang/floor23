@@ -32,3 +32,22 @@ export const MainPhoto = glamorous.div({
     width: '100%'
   }
 })
+
+export const ContactBox = glamorous.div({
+  fontSize: '1.1em',
+  fontFamily: 'Helvetica',
+  textAlign: 'center'
+})
+
+export const MLink = glamorous.a({
+  color: '#7F6153',
+  userSelect: 'none',
+  cursor: 'pointer',
+  fontSize: '1em',
+  fontFamily: 'Helvetica',
+  marginLeft: '1em',
+  textDecoration: 'none',
+  ':hover': {
+    color: 'black',
+  }
+})

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { MainMenuList, MainMenu , Title} from 'style/styleComponents';
+import { MainMenuList, Title} from 'style/styleComponents';
 import Menu from './Menu';
 
 let MenuDB = [
@@ -53,11 +53,9 @@ class MainBar extends Component {
         (menu, info) => {
           if(menu.name === "title"){
             return(
-              <MainMenu key ={info}>
                 <Title to={process.env.PUBLIC_URL}>
                   <img src={require('img/floor23.png')} width='65px' alt='title'/>
                 </Title>
-              </MainMenu>
             )
           }
           else {

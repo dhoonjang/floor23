@@ -4,7 +4,7 @@ const Book = () => {
     return (
         <div>
             <h2>
-                Book
+                Coming Soon
             </h2>
         </div>
     );

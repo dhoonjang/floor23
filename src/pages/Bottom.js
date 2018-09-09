@@ -4,7 +4,7 @@ const Bottom = () => {
     return (
         <div>
             <h2>
-                Bottom
+                Coming Soon
             </h2>
         </div>
     );

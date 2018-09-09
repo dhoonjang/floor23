@@ -4,7 +4,7 @@ const Acc = () => {
     return (
         <div>
             <h2>
-                Acc
+                Coming Soon
             </h2>
         </div>
     );

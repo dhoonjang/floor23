@@ -1,10 +1,14 @@
 import React from 'react';
+import { ContactBox, MLink } from 'style/stylePages'
 
 const Contact = () => {
     return (
-        <div>
-            <img src={require('img/contact.png')} width='100%' alt='contact us'/>
-        </div>
+        <ContactBox>
+            <b>MAIL</b>:
+              <MLink href="mailto:artist23iii@gmail.com">
+                artist23iii@gmail.com
+              </MLink>
+        </ContactBox>
     );
 };
 

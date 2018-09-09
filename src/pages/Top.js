@@ -4,7 +4,7 @@ const Top = () => {
     return (
         <div>
             <h2>
-                Top
+                Coming Soon
             </h2>
         </div>
     );

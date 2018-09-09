@@ -1,5 +1,4 @@
 import React from 'react';
-import { MainBox } from 'style/stylePages'
 
 const Home = () => {
     return (

@@ -4,7 +4,7 @@ const DesignItem = () => {
     return (
         <div>
             <h2>
-                DesignItem
+                Coming Soon
             </h2>
         </div>
     );
