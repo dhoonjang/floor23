@@ -32,7 +32,7 @@ export const MainBody = glamorous.div({
   width: '600px',
   zIndex: '0',
   fontFamily: 'Helvetica',
-  '@media only screen and (max-width: 600px)': {
+  '@media only screen and (max-width: 650px)': {
     width: '95%'
   }
 })

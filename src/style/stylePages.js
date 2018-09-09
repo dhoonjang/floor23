@@ -16,9 +16,9 @@ export const Box = glamorous.div({
   marginRight: id%2 === 1 && '0em',
   marginTop: id%2 === 1 && '-20.02em',
   '@media only screen and (max-width: 720px)': {
-    width: '95%',
+    width: '90%',
     height: '0px',
-    paddingTop: '95%',
+    paddingTop: '90%',
     margin: '0 auto',
     marginBottom: '2%'
   }
