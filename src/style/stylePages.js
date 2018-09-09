@@ -45,7 +45,6 @@ export const MLink = glamorous.a({
   cursor: 'pointer',
   fontSize: '1em',
   fontFamily: 'Helvetica',
-  marginLeft: '1em',
   textDecoration: 'none',
   ':hover': {
     color: 'black',
