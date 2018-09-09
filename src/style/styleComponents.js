@@ -64,7 +64,7 @@ export const IconBox = glamorous.div({
 },({id}) => ({
   left: id === 'right' && '5%',
   right: id === 'left' && '5%',
-  '@media only screen and (max-width: 720px)': {
+  '@media only screen and (max-width: 800px)': {
     left: id === 'right' && '0.1em',
     right: id === 'left' && '0.1em',
   }
