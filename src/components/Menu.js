@@ -20,7 +20,7 @@ class Menu extends Component {
   render() {
     const menu = this.props.children.map(
       (child, info) => (
-        <SLink to={process.env.PUBLIC_URL +'/'+ child}>{child}</SLink>
+        <SLink to={process.env.PUBLIC_URL +'/'+ child} key={info}>{child}</SLink>
       )
     );
 

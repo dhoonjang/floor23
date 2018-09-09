@@ -53,7 +53,7 @@ class MainBar extends Component {
         (menu, info) => {
           if(menu.name === "title"){
             return(
-                <Title to={process.env.PUBLIC_URL}>
+                <Title to={process.env.PUBLIC_URL} key={info}>
                   <img src={require('img/floor23.png')} width='65px' alt='title'/>
                 </Title>
             )
